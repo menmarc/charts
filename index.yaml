@@ -53,6 +53,16 @@ entries:
   argo-controller:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2023-01-10T16:02:45.481058299Z"
+    description: A Helm chart for the Statistics Canada Argo Controller.
+    digest: 78a8071085f726cd1683b7cd4b101df87882fc03c8bd692067ca0818e89d14e7
+    name: argo-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/argo-controller-0.0.9/argo-controller-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-10-26T15:13:39.94755578Z"
     description: A Helm chart for the Statistics Canada Argo Controller.
     digest: e7ab4316febf65ab9dd4c97c771f70cd3e4a2b0d4c582e7e1905691a6143e7b0
@@ -160,6 +170,17 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/ckan-0.0.23/ckan-0.0.23.tgz
     version: 0.0.23
+  cnp-controller:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-01-10T16:02:46.375802506Z"
+    description: A Helm chart for the Statistics Canada CNP Controller.
+    digest: 8af8b01a13d714ac382d07e887528415c724355e263cf7dd81fff2e567ae9557
+    name: cnp-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/cnp-controller-0.0.1/cnp-controller-0.0.1.tgz
+    version: 0.0.1
   cost-analyzer:
   - apiVersion: v2
     appVersion: 1.74.0
@@ -586,6 +607,31 @@ entries:
   fdi-dotstatsuite:
   - apiVersion: v2
     appVersion: 7.2.0
+    created: "2023-01-10T16:02:46.637979099Z"
+    dependencies:
+    - condition: mssql-linux.enabled
+      name: mssql-linux
+      repository: https://charts.helm.sh/stable
+      version: 0.11.4
+    description: fdi-dotstatsuite kube core services
+    digest: 221b76e4ab306d6026422424aaa80cd7ee51139420fe89f744217c429bdfa870
+    home: https://statcan.gc.ca
+    maintainers:
+    - email: william.hearn@canada.ca
+      name: sylus
+    - email: zachary.seguin@canada.ca
+      name: Zachary Seguin
+    - email: tim.raizenne@canada.ca
+      name: Tim Raizenne
+    name: fdi-dotstatsuite
+    sources:
+    - https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-kube-core-rp/-/tree/master/staging
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-0.2.18/fdi-dotstatsuite-0.2.18.tgz
+    version: 0.2.18
+  - apiVersion: v2
+    appVersion: 7.2.0
     created: "2022-10-26T15:13:41.05104797Z"
     dependencies:
     - condition: mssql-linux.enabled
@@ -627,7 +673,42 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-de-0.2.0/fdi-dotstatsuite-de-0.2.0.tgz
     version: 0.2.0
+  fdi-dotstatsuite-de-dv:
+  - apiVersion: v2
+    appVersion: v14.0.0
+    created: "2023-01-10T16:02:46.908034367Z"
+    description: fdi-dotstatsuite helm chart for the Data Explorer and Data Viewer
+    digest: 5238c75ae540eccf703ef5100536ba51f266bd56fedd0ce28cfb37a715efde38
+    home: https://statcan.gc.ca
+    maintainers:
+    - email: tim.raizenne@statcan.gc.ca
+      name: Timothy Raizenne
+    name: fdi-dotstatsuite-de-dv
+    sources:
+    - https://gitlab.k8s.cloud.statcan.ca/analytics-platform/fdi-idf/metadata
+    - https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-kube-rp/
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-de-dv-0.3.0/fdi-dotstatsuite-de-dv-0.3.0.tgz
+    version: 0.3.0
   fdi-dotstatsuite-dlm:
+  - apiVersion: v2
+    appVersion: v14.0.0
+    created: "2023-01-10T16:02:47.176498521Z"
+    description: fdi-dotstatsuite helm chart for the Data Lifecycle Manager
+    digest: 205c8e01a412ae71b510962b81c58631cc37397c41053e74bd909b48695d91ec
+    home: https://statcan.gc.ca
+    maintainers:
+    - email: tim.raizenne@statcan.gc.ca
+      name: Timothy Raizenne
+    name: fdi-dotstatsuite-dlm
+    sources:
+    - https://gitlab.k8s.cloud.statcan.ca/analytics-platform/fdi-idf/metadata
+    - https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-kube-rp/
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-dlm-0.3.0/fdi-dotstatsuite-dlm-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     appVersion: v14.0.0
     created: "2022-10-26T15:13:41.327271915Z"
@@ -645,6 +726,16 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-dlm-0.2.0/fdi-dotstatsuite-dlm-0.2.0.tgz
     version: 0.2.0
+  fdi-eck:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-01-10T16:02:47.449051915Z"
+    description: Helm chart for fluentd configmap
+    digest: 19bf98cf7f5af09cdc2b03ae090cd81f1cdbfc42858d5561be7ce07d0e511ca7
+    name: fdi-eck
+    urls:
+    - https://github.com/menmarc/charts/releases/download/fdi-eck-0.4.0/fdi-eck-0.4.0.tgz
+    version: 0.4.0
   fdi-eck-configmap:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -825,6 +916,27 @@ entries:
     - https://github.com/menmarc/charts/releases/download/inferenceservices-controller-0.0.1/inferenceservices-controller-0.0.1.tgz
     version: 0.0.1
   ingress-istio-controller:
+  - apiVersion: v2
+    appVersion: v1.3.2
+    created: "2023-01-10T16:02:47.729868387Z"
+    description: An Ingress controller for Istio which converts Kubernetes Ingresses
+      into VirtualServices.
+    digest: f0b7ed913db357c222b1c7d69655697b369b5e65249ba5fea8183743af14bcc1
+    home: https://statcan.gc.ca
+    maintainers:
+    - email: william.hearn@canada.ca
+      name: sylus
+    - email: zachary.seguin@canada.ca
+      name: Zachary Seguin
+    - email: justin.bertrand@canada.ca
+      name: Justin Bertrand
+    name: ingress-istio-controller
+    sources:
+    - https://github.com/StatCan/ingress-istio-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/ingress-istio-controller-1.2.3/ingress-istio-controller-1.2.3.tgz
+    version: 1.2.3
   - apiVersion: v2
     appVersion: v1.2.0
     created: "2022-10-26T15:13:42.228700534Z"
@@ -1361,6 +1473,16 @@ entries:
     - https://statcan.github.io/charts/pachyderm-0.4.0.tgz
     version: 0.4.0
   profiles-controller:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-01-10T16:02:48.009342646Z"
+    description: A Helm chart for the Statistics Canada Kubeflow Profiles Controller.
+    digest: da979a036c0793de9cf22fa3695f5865196871ff8a64d5114975674b2a5dfc25
+    name: profiles-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/profiles-controller-0.5.21/profiles-controller-0.5.21.tgz
+    version: 0.5.21
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-12-02T18:42:16.646380406Z"
@@ -2305,4 +2427,4 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/vetting-0.1.139/vetting-0.1.139.tgz
     version: 0.1.139
-generated: "2023-01-10T16:00:36.768682034Z"
+generated: "2023-01-10T16:02:48.263343563Z"
