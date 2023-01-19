@@ -1475,6 +1475,16 @@ entries:
   profiles-controller:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2023-01-19T17:19:19.306802593Z"
+    description: A Helm chart for the Statistics Canada Kubeflow Profiles Controller.
+    digest: b316f87cc707f35e8d128a3632d45b142a11bb1896d119d73faa0ce4b27a7985
+    name: profiles-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/profiles-controller-0.5.23/profiles-controller-0.5.23.tgz
+    version: 0.5.23
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2023-01-10T16:02:48.009342646Z"
     description: A Helm chart for the Statistics Canada Kubeflow Profiles Controller.
     digest: da979a036c0793de9cf22fa3695f5865196871ff8a64d5114975674b2a5dfc25
@@ -2153,6 +2163,29 @@ entries:
   vetting:
   - apiVersion: v2
     appVersion: "2.0"
+    created: "2023-01-19T17:19:19.468075959Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami
+      version: 9.4.1
+    description: A Helm chart for Discolsure Vetting Application
+    digest: 489f58ad17d84b03b316e4385a1e3d7c087ddac9bef90c15d997cef945382f36
+    home: https://statcan.gc.ca
+    icon: https://www.python.org/static/img/python-logo
+    maintainers:
+    - email: marc-andre.menard@statcan.gc.ca
+      name: Marc-André Ménard
+    - email: mathis.marcotte@statcan.gc.ca
+      name: Mathis Marcotte
+    name: vetting
+    sources:
+    - https://github.com/StatCan/disclosure-vetting-application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/vetting-0.1.151/vetting-0.1.151.tgz
+    version: 0.1.151
+  - apiVersion: v2
+    appVersion: "2.0"
     created: "2023-01-10T16:00:36.768466032Z"
     dependencies:
     - condition: postgresql.enabled
@@ -2427,4 +2460,4 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/vetting-0.1.139/vetting-0.1.139.tgz
     version: 0.1.139
-generated: "2023-01-10T16:02:48.263343563Z"
+generated: "2023-01-19T17:19:19.468297062Z"
