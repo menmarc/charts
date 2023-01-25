@@ -607,6 +607,31 @@ entries:
   fdi-dotstatsuite:
   - apiVersion: v2
     appVersion: 7.2.0
+    created: "2023-01-25T17:04:39.55442411Z"
+    dependencies:
+    - condition: mssql-linux.enabled
+      name: mssql-linux
+      repository: https://charts.helm.sh/stable
+      version: 0.11.4
+    description: fdi-dotstatsuite kube core services
+    digest: b9f6ff9ac2de72d3943e9838792b713035a69ea8bd16d3380e4c695811eacca7
+    home: https://statcan.gc.ca
+    maintainers:
+    - email: william.hearn@canada.ca
+      name: sylus
+    - email: zachary.seguin@canada.ca
+      name: Zachary Seguin
+    - email: tim.raizenne@canada.ca
+      name: Tim Raizenne
+    name: fdi-dotstatsuite
+    sources:
+    - https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-kube-core-rp/-/tree/master/staging
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-0.2.19/fdi-dotstatsuite-0.2.19.tgz
+    version: 0.2.19
+  - apiVersion: v2
+    appVersion: 7.2.0
     created: "2023-01-10T16:02:46.637979099Z"
     dependencies:
     - condition: mssql-linux.enabled
@@ -692,6 +717,23 @@ entries:
     - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-de-dv-0.3.0/fdi-dotstatsuite-de-dv-0.3.0.tgz
     version: 0.3.0
   fdi-dotstatsuite-dlm:
+  - apiVersion: v2
+    appVersion: v14.0.0
+    created: "2023-01-25T17:04:39.967290048Z"
+    description: fdi-dotstatsuite helm chart for the Data Lifecycle Manager
+    digest: b21ad50269f831d0557fda4e57d5a24f3d170fa35c18ba49b52ad21fafbf6ebd
+    home: https://statcan.gc.ca
+    maintainers:
+    - email: tim.raizenne@statcan.gc.ca
+      name: Timothy Raizenne
+    name: fdi-dotstatsuite-dlm
+    sources:
+    - https://gitlab.k8s.cloud.statcan.ca/analytics-platform/fdi-idf/metadata
+    - https://gitlab.com/sis-cc/.stat-suite/dotstatsuite-kube-rp/
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/fdi-dotstatsuite-dlm-0.3.1/fdi-dotstatsuite-dlm-0.3.1.tgz
+    version: 0.3.1
   - apiVersion: v2
     appVersion: v14.0.0
     created: "2023-01-10T16:02:47.176498521Z"
@@ -980,6 +1022,19 @@ entries:
     - https://statcan.github.io/charts/ingress-istio-controller-1.0.0.tgz
     version: 1.0.0
   istio-ingress-gateway:
+  - apiVersion: v2
+    created: "2023-01-25T17:04:40.466113397Z"
+    description: 'This chart deploys an opinionated Istio ngress-gateway. It uses
+      the Istio Operator to deploy the Istio components and cert-manager to handle
+      certificate generation.  Currently, only HTTPS configurations are available
+      (with automatic HTTPS redirect from HTTP if configured), however, more Gateways
+      and capbabilities may be added when the need arises. '
+    digest: e24cb30890d688745e0996569caf25977290a36725eda7cc30957b0de753a85f
+    name: istio-ingress-gateway
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/istio-ingress-gateway-2.5.4/istio-ingress-gateway-2.5.4.tgz
+    version: 2.5.4
   - apiVersion: v2
     created: "2022-10-26T15:13:42.339486524Z"
     description: 'This chart deploys an opinionated Istio ngress-gateway. It uses
@@ -1473,6 +1528,16 @@ entries:
     - https://statcan.github.io/charts/pachyderm-0.4.0.tgz
     version: 0.4.0
   profiles-controller:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-01-25T17:04:40.701889274Z"
+    description: A Helm chart for the Statistics Canada Kubeflow Profiles Controller.
+    digest: 7ad87c99859902a018805ce3d3ddd5c522c11f7023e61f4e12213649f3b029cc
+    name: profiles-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/profiles-controller-0.5.24/profiles-controller-0.5.24.tgz
+    version: 0.5.24
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2023-01-19T17:19:19.306802593Z"
@@ -2529,4 +2594,4 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/vetting-0.1.139/vetting-0.1.139.tgz
     version: 0.1.139
-generated: "2023-01-25T17:03:19.512848204Z"
+generated: "2023-01-25T17:04:40.702179076Z"
