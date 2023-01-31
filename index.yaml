@@ -1023,6 +1023,19 @@ entries:
     version: 1.0.0
   istio-ingress-gateway:
   - apiVersion: v2
+    created: "2023-01-31T17:04:26.506083205Z"
+    description: 'This chart deploys an opinionated Istio ngress-gateway. It uses
+      the Istio Operator to deploy the Istio components and cert-manager to handle
+      certificate generation.  Currently, only HTTPS configurations are available
+      (with automatic HTTPS redirect from HTTP if configured), however, more Gateways
+      and capbabilities may be added when the need arises. '
+    digest: d9e091c6ce0aabaedf7bf53407c54204c2f8351021b9757a1de8f3c46c18ced0
+    name: istio-ingress-gateway
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/istio-ingress-gateway-2.5.5/istio-ingress-gateway-2.5.5.tgz
+    version: 2.5.5
+  - apiVersion: v2
     created: "2023-01-25T17:04:40.466113397Z"
     description: 'This chart deploys an opinionated Istio ngress-gateway. It uses
       the Istio Operator to deploy the Istio components and cert-manager to handle
@@ -1368,6 +1381,30 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/namespace-controller-0.0.2/namespace-controller-0.0.2.tgz
     version: 0.0.2
+  nvidia-device-plugin:
+  - apiVersion: v2
+    appVersion: 0.13.0
+    created: "2023-01-31T17:04:26.640777093Z"
+    dependencies:
+    - alias: nfd
+      condition: nfd.enabled,gfd.enabled
+      name: node-feature-discovery
+      repository: ""
+      version: 0.11.0
+    - alias: gfd
+      condition: gfd.enabled
+      name: gpu-feature-discovery
+      repository: ""
+      version: 0.7.0
+    description: A Helm chart for the nvidia-device-plugin on Kubernetes
+    digest: 28920ae562dd406ccf23776bc3aa9f73ef3c914d0e01e33d6234588dea23150b
+    home: https://github.com/NVIDIA/k8s-device-plugin
+    kubeVersion: '>= 1.10.0-0'
+    name: nvidia-device-plugin
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/nvidia-device-plugin-0.13.0/nvidia-device-plugin-0.13.0.tgz
+    version: 0.13.0
   orchard-cms:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -1528,6 +1565,16 @@ entries:
     - https://statcan.github.io/charts/pachyderm-0.4.0.tgz
     version: 0.4.0
   profiles-controller:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-01-31T17:04:26.789351367Z"
+    description: A Helm chart for the Statistics Canada Kubeflow Profiles Controller.
+    digest: f8e6d8c92d538119233fab70182df603a3f307ca10d45c4f30f7d21a02f1dacb
+    name: profiles-controller
+    type: application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/profiles-controller-0.5.26/profiles-controller-0.5.26.tgz
+    version: 0.5.26
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2023-01-25T17:04:40.701889274Z"
@@ -2228,6 +2275,29 @@ entries:
   vetting:
   - apiVersion: v2
     appVersion: "2.0"
+    created: "2023-01-31T17:04:26.949597285Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami
+      version: 9.4.1
+    description: A Helm chart for Disclosure Vetting Application
+    digest: 3e136411ee766b9c123e3d17ebc8ab7e6ca5081cc2386f1c6a832b837193da9a
+    home: https://statcan.gc.ca
+    icon: https://www.python.org/static/img/python-logo
+    maintainers:
+    - email: marc-andre.menard@statcan.gc.ca
+      name: Marc-André Ménard
+    - email: mathis.marcotte@statcan.gc.ca
+      name: Mathis Marcotte
+    name: vetting
+    sources:
+    - https://github.com/StatCan/disclosure-vetting-application
+    urls:
+    - https://github.com/menmarc/charts/releases/download/vetting-0.1.162/vetting-0.1.162.tgz
+    version: 0.1.162
+  - apiVersion: v2
+    appVersion: "2.0"
     created: "2023-01-31T13:02:52.174545866Z"
     dependencies:
     - condition: postgresql.enabled
@@ -2732,4 +2802,4 @@ entries:
     urls:
     - https://github.com/menmarc/charts/releases/download/vetting-0.1.139/vetting-0.1.139.tgz
     version: 0.1.139
-generated: "2023-01-31T13:02:52.174801464Z"
+generated: "2023-01-31T17:04:26.949935906Z"
